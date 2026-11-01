@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naruka Wealth | AMFI Registered Mutual Fund Distributor & Stock Analytics</title>
+    <title>Naruka Wealth | AMFI Registered Mutual Fund Distributor</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -93,7 +93,7 @@
             <div>
                 <span class="bg-gold-500/10 text-gold-400 border border-gold-500/30 text-xs px-3 py-1 rounded-full uppercase tracking-widest font-bold">Trusted Wealth Partner</span>
                 <h1 class="text-4xl sm:text-6xl font-black text-white mt-4 leading-tight">Building Secure Futures, <span class="text-gold-500">Growing Wealth</span> Together</h1>
-                <p class="text-gray-300 mt-6 text-base sm:text-lg leading-relaxed">Expert Mutual Fund Distribution, advanced Nifty 500 stock screeners, and institutional-grade FII macro analytics curated by Rahul Naruka (ARN-277301).</p>
+                <p class="text-gray-300 mt-6 text-base sm:text-lg leading-relaxed">Expert Mutual Fund Distribution and institutional-grade financial analytics curated by Rahul Naruka (ARN-277301).</p>
                 
                 <!-- Direct Project Links Hub in Hero -->
                 <div class="mt-8 flex flex-wrap gap-3">
@@ -101,10 +101,10 @@
                         <i class="fas fa-file-contract mr-2"></i> AMFI Distributor Hub <i class="fas fa-external-link-alt ml-1 text-[10px]"></i>
                     </a>
                     <a href="https://rahul-naruka.github.io/stock/" target="_blank" class="bg-navy-800 hover:bg-navy-700 border border-navy-700 text-white px-5 py-3 rounded-xl font-bold transition flex items-center text-xs sm:text-sm">
-                        <i class="fas fa-chart-line mr-2"></i> Stock Screener <i class="fas fa-external-link-alt ml-1 text-[10px]"></i>
+                        <i class="fas fa-chart-line mr-2"></i> Stock Analytics <i class="fas fa-external-link-alt ml-1 text-[10px]"></i>
                     </a>
                     <a href="https://rahul-naruka.github.io/fii-macro-dashboard/" target="_blank" class="bg-navy-800 hover:bg-navy-700 border border-navy-700 text-white px-5 py-3 rounded-xl font-bold transition flex items-center text-xs sm:text-sm">
-                        <i class="fas fa-globe mr-2"></i> FII Macro <i class="fas fa-external-link-alt ml-1 text-[10px]"></i>
+                        <i class="fas fa-globe mr-2"></i> FII Macro Dashboard <i class="fas fa-external-link-alt ml-1 text-[10px]"></i>
                     </a>
                 </div>
             </div>
@@ -173,73 +173,14 @@
         </div>
     </section>
 
-    <!-- Stock Analytics Screener Section -->
-    <section id="screener" class="py-20 bg-navy-900 border-t border-navy-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
-                <div>
-                    <h2 class="text-3xl font-extrabold text-white">Nifty 500 Stock Screener</h2>
-                    <p class="text-gray-400 mt-2">Quantitative valuation and fundamental metrics tracker.</p>
-                </div>
-                <div class="mt-4 md:mt-0">
-                    <input type="text" id="stockSearch" placeholder="Search stock by name..." class="bg-navy-800 border border-navy-700 px-4 py-2 rounded-lg text-white text-sm focus:outline-none focus:border-gold-500 w-64">
-                </div>
-            </div>
-            <div class="overflow-x-auto bg-navy-800 rounded-2xl border border-navy-700 shadow-xl">
-                <table class="w-full text-left border-collapse text-sm">
-                    <thead>
-                        <tr class="bg-navy-900 text-gray-400 border-b border-navy-700">
-                            <th class="p-4">Company</th>
-                            <th class="p-4">Symbol</th>
-                            <th class="p-4">LTP (₹)</th>
-                            <th class="p-4">Change</th>
-                            <th class="p-4">P/E Ratio</th>
-                            <th class="p-4">ROCE (%)</th>
-                            <th class="p-4">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="stockTableBody" class="divide-y divide-navy-700">
-                        <tr>
-                            <td class="p-4 font-bold text-white">Reliance Industries</td>
-                            <td class="p-4 text-gray-400">RELIANCE</td>
-                            <td class="p-4">2,940.50</td>
-                            <td class="p-4 text-green-400">+1.45%</td>
-                            <td class="p-4">28.4</td>
-                            <td class="p-4 text-gold-400">12.5%</td>
-                            <td class="p-4"><a href="https://wa.me/9017404142?text=Inquiry%20regarding%20RELIANCE" target="_blank" class="text-gold-400 hover:underline">Analyze</a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 font-bold text-white">Tata Consultancy Services</td>
-                            <td class="p-4 text-gray-400">TCS</td>
-                            <td class="p-4">4,120.00</td>
-                            <td class="p-4 text-green-400">+0.85%</td>
-                            <td class="p-4">31.2</td>
-                            <td class="p-4 text-gold-400">48.2%</td>
-                            <td class="p-4"><a href="https://wa.me/9017404142?text=Inquiry%20regarding%20TCS" target="_blank" class="text-gold-400 hover:underline">Analyze</a></td>
-                        </tr>
-                        <tr>
-                            <td class="p-4 font-bold text-white">HDFC Bank</td>
-                            <td class="p-4 text-gray-400">HDFCBANK</td>
-                            <td class="p-4">1,680.25</td>
-                            <td class="p-4 text-red-400">-0.32%</td>
-                            <td class="p-4">19.5</td>
-                            <td class="p-4 text-gold-400">16.8%</td>
-                            <td class="p-4"><a href="https://wa.me/9017404142?text=Inquiry%20regarding%20HDFCBANK" target="_blank" class="text-gold-400 hover:underline">Analyze</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
     <!-- Calculators Section -->
-    <section id="calculators" class="py-20 bg-gray-950 border-t border-navy-800">
+    <section id="calculators" class="py-20 bg-navy-900 border-t border-navy-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Interactive Wealth Calculators</h2>
                 <p class="text-gray-400 mt-4">Plan your Systematic Investment Plan (SIP) and long-term financial milestones.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-12 bg-navy-900 p-8 rounded-3xl border border-navy-700 shadow-2xl">
+            <div class="grid md:grid-cols-2 gap-12 bg-navy-800 p-8 rounded-3xl border border-navy-700 shadow-2xl">
                 <div class="space-y-6">
                     <h3 class="text-xl font-bold text-white mb-4">SIP Calculator</h3>
                     <div>
@@ -269,7 +210,7 @@
     </section>
 
     <!-- Footer & Disclaimers -->
-    <footer id="contact" class="bg-navy-900 border-t border-navy-800 text-gray-400 py-16">
+    <footer id="contact" class="bg-gray-950 border-t border-navy-800 text-gray-400 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-12 pb-12 border-b border-navy-800">
                 <div>
@@ -354,15 +295,6 @@
         retEl.addEventListener('input', updateSIP);
         yrsEl.addEventListener('input', updateSIP);
         updateSIP();
-
-        document.getElementById('stockSearch').addEventListener('input', function(e) {
-            let q = e.target.value.toLowerCase();
-            let rows = document.querySelectorAll('#stockTableBody tr');
-            rows.forEach(row => {
-                let text = row.innerText.toLowerCase();
-                row.style.display = text.includes(q) ? '' : 'none';
-            });
-        });
     </script>
 </body>
 </html>
