@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruka Wealth | AMFI Registered Mutual Fund Distributor & Stock Analytics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 900: '#0a192f', 800: '#112240', 700: '#1d3557' },
+                        gold: { 500: '#d4af37', 600: '#aa8c2c', 400: '#f3e5ab' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-gold-500 selection:text-navy-900">
+
+    <!-- Top Live Ticker with Dynamic India VIX -->
+    <div class="bg-navy-900 border-b border-navy-700 text-xs py-2 px-4 overflow-hidden whitespace-nowrap">
+        <div class="inline-block animate-marquee flex space-x-8">
+            <span class="text-gray-400 font-semibold"><i class="fas fa-chart-line text-gold-500 mr-1"></i> LIVE MARKETS:</span>
+            <span>NIFTY 50: <strong class="text-green-400">23,890.45 (+0.72%)</strong></span>
+            <span>SENSEX: <strong class="text-green-400">78,345.20 (+0.68%)</strong></span>
+            <span>BANK NIFTY: <strong class="text-green-400">51,200.10 (+0.85%)</strong></span>
+            <span>INDIA VIX: <strong id="vixTicker" class="text-amber-400">15.30 (+1.21%)</strong></span>
+            <span>USD/INR: <strong class="text-gray-200">83.42 (-0.05%)</strong></span>
+            <span>GOLD (10g): <strong class="text-gold-500">₹72,450 (+0.4%)</strong></span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-navy-900/95 backdrop-blur sticky top-0 z-50 border-b border-navy-700 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gradient-to-tr from-gold-600 to-gold-400 p-2.5 rounded-xl text-navy-900 font-black text-xl shadow-lg shadow-gold-500/20">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black tracking-wider text-white">NARUKA <span class="text-gold-500">WEALTH</span></span>
+                        <div class="text-[10px] text-gray-400 font-medium tracking-widest uppercase">AMFI Reg No: ARN-277301</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-semibold">
+                    <a href="#home" class="hover:text-gold-400 transition">Home</a>
+                    <a href="#mfd" class="hover:text-gold-400 transition">Mutual Funds</a>
+                    <a href="#screener" class="hover:text-gold-400 transition">Stock Analytics</a>
+                    <a href="#macro" class="hover:text-gold-400 transition">FII Macro & CAMS</a>
+                    <a href="#calculators" class="hover:text-gold-400 transition">Calculators</a>
+                    <a href="#contact" class="hover:text-gold-400 transition">Contact</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="tel:8168391356" class="hidden sm:inline-flex items-center bg-gold-500 hover:bg-gold-600 text-navy-900 px-4 py-2 rounded-lg font-bold text-sm shadow transition">
+                        <i class="fas fa-phone-alt mr-2"></i> 8168391356
+                    </a>
+                    <a href="https://wa.me/9017404142" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-lg font-bold text-sm shadow transition flex items-center">
+                        <i class="fab fa-whatsapp mr-1"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative py-20 overflow-hidden bg-gradient-to-b from-navy-900 to-gray-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-gold-500/10 text-gold-400 border border-gold-500/30 text-xs px-3 py-1 rounded-full uppercase tracking-widest font-bold">Trusted Wealth Partner</span>
+                <h1 class="text-4xl sm:text-6xl font-black text-white mt-4 leading-tight">Building Secure Futures, <span class="text-gold-500">Growing Wealth</span> Together</h1>
+                <p class="text-gray-300 mt-6 text-base sm:text-lg leading-relaxed">Expert Mutual Fund Distribution, advanced Nifty 500 stock screeners, and institutional-grade FII macro analytics curated by Rahul Naruka (ARN-277301).</p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#mfd" class="bg-gold-500 hover:bg-gold-600 text-navy-900 px-8 py-3.5 rounded-xl font-bold shadow-lg shadow-gold-500/20 transition flex items-center">
+                        Explore Funds <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#calculators" class="bg-navy-800 hover:bg-navy-700 border border-navy-700 text-white px-8 py-3.5 rounded-xl font-bold transition flex items-center">
+                        Wealth Calculators
+                    </a>
+                </div>
+            </div>
+            <div class="bg-navy-900/80 border border-navy-700 p-8 rounded-3xl shadow-2xl backdrop-blur">
+                <h3 class="text-xl font-bold text-white mb-6 border-b border-navy-700 pb-3"><i class="fas fa-user-tie text-gold-500 mr-2"></i> Advisor Profile</h3>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex justify-between"><span class="text-gray-400">Distributor Name:</span> <strong class="text-white">Rahul Naruka</strong></li>
+                    <li class="flex justify-between"><span class="text-gray-400">AMFI Registration:</span> <strong class="text-gold-400">ARN-277301</strong></li>
+                    <li class="flex justify-between"><span class="text-gray-400">Calling Number:</span> <strong class="text-white">8168391356</strong></li>
+                    <li class="flex justify-between"><span class="text-gray-400">WhatsApp Number:</span> <strong class="text-white">9017404142</strong></li>
+                    <li class="flex justify-between"><span class="text-gray-400">Official Email:</span> <strong class="text-white">narukawealth@gmail.com</strong></li>
+                    <li class="flex justify-between"><span class="text-gray-400">Registered Office:</span> <strong class="text-white text-right">Ward No.10 Mohalla Kanugo Bawal, Rewari, Haryana-123501</strong></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMFI Mutual Funds Hub -->
+    <section id="mfd" class="py-20 bg-gray-950 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Top Performing Mutual Fund Schemes</h2>
+                <p class="text-gray-400 mt-4">Handpicked category leaders curated for long-term wealth compounding under professional guidance.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8" id="fundGrid"></div>
+        </div>
+    </section>
+
+    <!-- Stock Analytics Screener -->
+    <section id="screener" class="py-20 bg-navy-900 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white">Nifty 500 Stock Screener</h2>
+                    <p class="text-gray-400 mt-2">Quantitative valuation and fundamental metrics tracker.</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <input type="text" id="stockSearch" placeholder="Search stock by name or symbol..." class="bg-navy-800 border border-navy-700 px-4 py-2 rounded-lg text-white text-sm focus:outline-none focus:border-gold-500 w-72">
+                </div>
+            </div>
+            <div class="overflow-x-auto bg-navy-800 rounded-2xl border border-navy-700 shadow-xl">
+                <table class="w-full text-left border-collapse text-sm">
+                    <thead>
+                        <tr class="bg-navy-900 text-gray-400 border-b border-navy-700">
+                            <th class="p-4">Company</th>
+                            <th class="p-4">Symbol</th>
+                            <th class="p-4">LTP (₹)</th>
+                            <th class="p-4">Change</th>
+                            <th class="p-4">P/E Ratio</th>
+                            <th class="p-4">ROCE (%)</th>
+                            <th class="p-4">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockTableBody" class="divide-y divide-navy-700"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FII Macro Dashboard & CAMS CAS Parser -->
+    <section id="macro" class="py-20 bg-gray-950 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">FII Macro & CAMS Portfolio Analyzer</h2>
+                <p class="text-gray-400 mt-4">Real-time institutional flow tracking and CAMS statement risk scoring interface.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-navy-900 border border-navy-700 p-6 rounded-2xl">
+                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">FII Net Flow (Monthly)</span>
+                    <h3 class="text-2xl font-black text-red-400 mt-2">-₹12,450 Cr</h3>
+                    <p class="text-xs text-gray-500 mt-1">Foreign Institutional Investors selling</p>
+                </div>
+                <div class="bg-navy-900 border border-navy-700 p-6 rounded-2xl">
+                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">DII Net Flow (Monthly)</span>
+                    <h3 class="text-2xl font-black text-green-400 mt-2">+₹15,890 Cr</h3>
+                    <p class="text-xs text-gray-500 mt-1">Domestic Institutional Investors buying</p>
+                </div>
+                <div class="bg-navy-900 border border-navy-700 p-6 rounded-2xl">
+                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">RBI Repo Rate</span>
+                    <h3 class="text-2xl font-black text-white mt-2">6.50%</h3>
+                    <p class="text-xs text-gray-500 mt-1">Neutral monetary stance</p>
+                </div>
+                <div class="bg-navy-900 border border-navy-700 p-6 rounded-2xl">
+                    <span class="text-xs text-gray-400 uppercase tracking-widest font-bold">India CPI Inflation</span>
+                    <h3 class="text-2xl font-black text-white mt-2">4.85%</h3>
+                    <p class="text-xs text-gray-500 mt-1">Within RBI 2%-6% target</p>
+                </div>
+            </div>
+
+            <!-- CAMS CAS Analyzer Card -->
+            <div class="bg-navy-900 border border-navy-700 p-8 rounded-3xl shadow-xl">
+                <h3 class="text-xl font-bold text-white mb-4"><i class="fas fa-file-invoice-dollar text-gold-500 mr-2"></i> CAMS CAS Statement Risk Analyzer</h3>
+                <p class="text-sm text-gray-300 mb-6">Upload or paste your CAMS / KFintech Consolidated Account Statement (CAS) summary to calculate asset allocation risk scores and portfolio overlaps.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <textarea id="casInput" rows="5" placeholder="Paste CAS text summary here..." class="bg-navy-800 border border-navy-700 p-4 rounded-xl text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
+                    <div class="flex flex-col justify-between bg-navy-800 p-6 rounded-xl border border-navy-700">
+                        <div>
+                            <h4 class="font-bold text-white text-sm mb-2">Portfolio Diagnostics</h4>
+                            <div id="casOutput" class="text-xs text-gray-300 space-y-2">
+                                <p>Status: Ready for analysis.</p>
+                                <p>Risk Score: -- / 10</p>
+                                <p>Suggested Equity/Debt Ratio: --</p>
+                            </div>
+                        </div>
+                        <button id="analyzeCasBtn" class="mt-4 bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-2.5 rounded-lg text-sm transition">Analyze Portfolio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculators Section -->
+    <section id="calculators" class="py-20 bg-navy-900 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Interactive Wealth Calculators</h2>
+                <p class="text-gray-400 mt-4">Plan your Systematic Investment Plan (SIP) and long-term financial milestones.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 bg-navy-800 p-8 rounded-3xl border border-navy-700 shadow-2xl">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-white mb-4">SIP Calculator</h3>
+                    <div>
+                        <label class="block text-sm text-gray-300 font-medium mb-2">Monthly Investment (₹): <span id="sipAmountVal" class="text-gold-400 font-bold">10,000</span></label>
+                        <input type="range" id="sipAmount" min="500" max="100000" step="500" value="10000" class="w-full accent-gold-500 cursor-pointer">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-300 font-medium mb-2">Expected Annual Return (%): <span id="sipReturnVal" class="text-gold-400 font-bold">15%</span></label>
+                        <input type="range" id="sipReturn" min="5" max="30" step="0.5" value="15" class="w-full accent-gold-500 cursor-pointer">
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-300 font-medium mb-2">Time Period (Years): <span id="sipYearsVal" class="text-gold-400 font-bold">10</span></label>
+                        <input type="range" id="sipYears" min="1" max="30" step="1" value="10" class="w-full accent-gold-500 cursor-pointer">
+                    </div>
+                    <div class="pt-4 border-t border-navy-700 space-y-2">
+                        <div class="flex justify-between text-sm"><span class="text-gray-400">Invested Amount:</span> <strong id="sipInvested" class="text-white">₹12,00,000</strong></div>
+                        <div class="flex justify-between text-sm"><span class="text-gray-400">Estimated Wealth:</span> <strong id="sipWealth" class="text-gold-400 text-lg">₹23,23,391</strong></div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="w-full max-w-xs">
+                        <canvas id="sipChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Disclaimers -->
+    <footer id="contact" class="bg-gray-950 border-t border-navy-800 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 pb-12 border-b border-navy-800">
+                <div>
+                    <h3 class="text-xl font-black text-white mb-4">NARUKA <span class="text-gold-500">WEALTH</span></h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">AMFI-Registered Mutual Fund Distributor committed to client-centric financial planning, disciplined investing, and long-term wealth creation.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Contact Details</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><i class="fas fa-user text-gold-500 mr-2"></i> <strong>Rahul Naruka</strong> (ARN-277301)</li>
+                        <li><i class="fas fa-phone text-gold-500 mr-2"></i> Call: 8168391356</li>
+                        <li><i class="fab fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp: 9017404142</li>
+                        <li><i class="fas fa-envelope text-gold-500 mr-2"></i> narukawealth@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt text-gold-500 mr-2"></i> Ward No.10 Mohalla Kanugo Bawal, Rewari, Haryana-123501</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Regulatory Disclaimer</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Mutual fund investments are subject to market risks, read all scheme related documents carefully. Rahul Naruka is an AMFI-Registered Mutual Fund Distributor (ARN-277301).</p>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center">
+                <p>&copy; 2026 Naruka Wealth. All Rights Reserved.</p>
+                <p class="mt-4 sm:mt-0">GitHub Repository: rahul-naruka/wealth</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>

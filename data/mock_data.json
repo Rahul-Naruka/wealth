@@ -1,0 +1,12 @@
+{
+    "funds": [
+        { "name": "Parag Parikh Flexi Cap Fund", "category": "Equity - Flexi Cap", "aum": "₹78,420 Cr", "cagr3yr": "21.4%", "cagr5yr": "23.8%" },
+        { "name": "Nippon India Small Cap Fund", "category": "Equity - Small Cap", "aum": "₹54,110 Cr", "cagr3yr": "27.2%", "cagr5yr": "28.9%" },
+        { "name": "ICICI Pru Balanced Advantage", "category": "Hybrid - Balanced", "aum": "₹58,900 Cr", "cagr3yr": "16.5%", "cagr5yr": "15.8%" }
+    ],
+    "stocks": [
+        { "company": "Reliance Industries", "symbol": "RELIANCE", "ltp": 2940.50, "change": "+1.45%", "pe": 28.4, "roce": "12.5%" },
+        { "company": "Tata Consultancy Services", "symbol": "TCS", "ltp": 4120.00, "change": "+0.85%", "pe": 31.2, "roce": "48.2%" },
+        { "company": "HDFC Bank", "symbol": "HDFCBANK", "ltp": 1680.25, "change": "-0.32%", "pe": 19.5, "roce": "16.8%" }
+    ]
+}
